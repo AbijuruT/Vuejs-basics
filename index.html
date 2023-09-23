@@ -27,6 +27,7 @@
        <!-- V-model directive -->
        <input v-model="greeting"/>
        <hr>
+       <button @click="toggleBox">Toggle Box</button>
        <div v-if="isVisible" class="box"></div>
     </div>
 
@@ -36,9 +37,15 @@
             data: function(){
                 return{
                     greeting: 'Hello Vue 3!',
-                    isVisible : true
+                    isVisible : false
+                }
+            },
+            methods: {
+                toggleBox(){
+                    this.isVisible = !this.isVisible
                 }
             }
+
         })
         app.mount('#app')
     </script>

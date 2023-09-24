@@ -7,6 +7,7 @@ function addGoal(){
     const listItemEl = document.createElement('li')
     listItemEl.textContent = enteredValue
     listEl.appendChild(listItemEl)
+    inputEl.value = ''
 }
 
 buttonEl.addEventListener('click', addGoal)

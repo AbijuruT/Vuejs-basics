@@ -18,7 +18,11 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p></p>
+      <!-- Display the value from vue -->
+      <!-- <p v-html="outputGoal()"></p> -->
+      <p>{{outputGoal()}}</p>
+      <!-- We are using v-bind to instruct vue to set a value of an attribute -->
+      <p>Learn more <a v-bind:href="vueLink" href="">About Vue</a>.</p>
     </section>
   </body>
 </html>
